@@ -1,12 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {StatusBar} from 'expo-status-bar';
+import {StyleSheet, Text, View} from 'react-native';
+import {QueryClient, QueryClientProvider} from 'react-query';
+import HomeScreen from './src/HomeScreen';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import SecondScreen from './src/SecondScreen/SecondScreen';
 
 export default function App() {
+  const queryClient = new QueryClient();
+  const Stack = createNativeStackNavigator();
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <QueryClientProvider client={queryClient}>
+        <Stack.Navigator>
+          <Stack.Screen
+            name="Home"
+            component={HomeScreen}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen name="SecondScreen" component={SecondScreen} />
+        </Stack.Navigator>
+      </QueryClientProvider>
+    </NavigationContainer>
   );
 }
 
