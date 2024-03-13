@@ -2,7 +2,7 @@
   "expo": {
     "name": "ProjectTwo",
     "slug": "ProjectTwo",
-    "version": "1.0.0",
+    "version": "1.0.3",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -16,14 +16,16 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.sagar.pawar.ProjectTwo"
+      "bundleIdentifier": "com.sagar.pawar.ProjectTwo",
+      "buildNumber": "3"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.sagar.pawar.ProjectTwo"
+      "package": "com.sagar.pawar.ProjectTwo",
+      "versionCode": 3
     },
     "web": {
       "favicon": "./assets/favicon.png"
